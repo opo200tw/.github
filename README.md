@@ -42,7 +42,6 @@
 | :--- | :--- |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
-| [**faaclib**](https://github.com/opo200tw/faaclib) | GPM4 |
 
 ---
 
