@@ -59,7 +59,7 @@
 
 | 專案 / 儲存庫 | 狀態 | 歸檔說明 |
 | :--- | :--- | :--- |
-| [**GPA7XXXA_V1.2**](https://github.com/opo200tw/GPA7XXXA_V1.2) | 📦 **已歸檔** | 歷史專案已歸檔封存 |
+| [**GPA7XXXA_V1.2**](https://github.com/opo200tw/GPA7XXXA_V1.2) | 📦 **已歸檔** | [Deprecated] 早期 GeneralPlus GPA7 原廠 SDK V1.2 歷史版本，已由 UM-GPM7-SDK-v1.3.1 與 UM-GPM7-camera 取代封存 |
 | [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔** | [Deprecated] 早期原型專案已廢棄，功能由 camera 與獨立 sensor 模組取代 |
 | [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔** | [Deprecated] 原為 UM-GPM7-camera 的 sensor，現已廢棄停用，僅供歷史參考 |
 | [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
