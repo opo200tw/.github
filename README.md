@@ -42,7 +42,6 @@
 | :--- | :--- |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
-| [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 早期呼叫器與遙控器歷史專案保存 |
 | [**faaclib**](https://github.com/opo200tw/faaclib) | GPM4 |
 
 ---
@@ -63,6 +62,7 @@
 | [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔** | [Deprecated] 早期原型專案已廢棄，功能由 camera 與獨立 sensor 模組取代 |
 | [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔** | [Deprecated] 原為 UM-GPM7-camera 的 sensor，現已廢棄停用，僅供歷史參考 |
 | [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
+| [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
 | [**x-cube-tof1**](https://github.com/opo200tw/x-cube-tof1) | 📦 **已歸檔** | [Deprecated] 原為 UM-GPM7-camera 的 TOF 測距感測器驅動包，驅動已整合至主專案，本庫已歸檔封存 |
 
 ---
