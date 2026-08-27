@@ -43,6 +43,7 @@ def main():
         "ipchub": ("🎥 音視訊串流測試", "輕量級網路攝影機（IPC）流媒體伺服器與集中管理"),
         "lal": ("🎥 音視訊串流測試", "高效能音視訊直播流媒體伺服器（RTMP / RTSP / HLS / HTTP-FLV）"),
         "naza": ("🎥 音視訊串流測試", "Go 語言基礎公用函式庫（lal 串流伺服器依賴）"),
+        "jessibuca": ("🎥 音視訊串流測試", "開源純 H5 跨平台低延遲直播流播放器前端組件"),
         "faac": ("🔊 音訊轉碼參考", "AAC 音訊壓縮編碼庫（Freeware Advanced Audio Coder）"),
         "libg7112aac": ("🔊 音訊轉碼參考", "嵌入式音訊轉碼庫（G.711 語音編碼 ➔ AAC 格式轉換）"),
         "colorbar": ("🖼️ 影像測試工具", "彩色測試圖條生成器（生成 RGB/YUV 各解析度測試圖，用於相機 ISP 除錯）"),
@@ -50,6 +51,8 @@ def main():
         "stb": ("🖼️ 單檔工具庫參考", "知名 C/C++ Header-only 單檔工具庫（stb_image, stb_truetype 等）"),
         "csv_parser": ("⚙️ 嵌入式底層參考", "純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔）"),
         "crc32": ("⚙️ 演算法原理參考", "高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗）"),
+        "snagboot": ("⚙️ 燒錄與復原工具", "嵌入式平台通用復原、開機導引與 Flash 燒錄工具"),
+        "toolchains-builder": ("⚙️ 編譯工具鏈建置", "嵌入式 GCC 交叉編譯工具鏈建置與自動化腳本"),
         "doc": ("🔐 網路協定文件", "音視訊 RFC 標準協議規範與測試用音視訊檔案庫"),
     }
 
@@ -105,8 +108,13 @@ def main():
             continue
 
         # 4. Animal Speaker / GPM4 系列
-        if "animalspeaker" in name.lower() or name == "UM-GPM4":
-            item["role"] = "產品韌體正本（Canonical）" if "animalspeaker" in name.lower() else "平台對照庫（Platform Umbrella）"
+        if "animalspeaker" in name.lower() or name == "UM-GPM4" or "gpm4_platform" in name.lower():
+            if "animalspeaker" in name.lower():
+                item["role"] = "產品韌體正本（Canonical）"
+            elif name == "UM-GPM4":
+                item["role"] = "平台對照庫（Platform Umbrella）"
+            else:
+                item["role"] = "SDK 歷史快照"
             animal_speaker_repos.append(item)
             continue
 
@@ -117,7 +125,7 @@ def main():
             continue
 
         # 6. 工具類
-        if "term" in name.lower() or "tool" in name.lower() or "demo" in name.lower() or "factory" in name.lower():
+        if "term" in name.lower() or "tool" in name.lower() or "demo" in name.lower() or "factory" in name.lower() or "serial" in name.lower():
             tool_repos.append(item)
             continue
 

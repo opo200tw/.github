@@ -10,6 +10,7 @@
 
 | 專案 / 儲存庫 | 角色與定位 | 說明 |
 | :--- | :--- | :--- |
+| [**GPM4_Platform_Code_V1.0.3_Release2**](https://github.com/opo200tw/GPM4_Platform_Code_V1.0.3_Release2) | **SDK 歷史快照** | GeneralPlus GPM4 晶片平台 SDK 歷史版本快照（V1.0.3 Release 2） |
 | [**UM-GPM4**](https://github.com/opo200tw/UM-GPM4) | **平台對照庫（Platform Umbrella）** | GeneralPlus GPM47XXA 原廠 SDK 多版本（v1.0.3, v1.0.4-release）鏡像與 Meson 工具鏈對照庫 |
 | [**UM-GPM4-AnimalSpeaker**](https://github.com/opo200tw/UM-GPM4-AnimalSpeaker) | **產品韌體正本（Canonical）** | 雙機式動物呼叫器產品韌體正本（HandUnit + Speaker + Bootloader + BLE 通訊協定） |
 
@@ -44,6 +45,7 @@
 | :--- | :--- |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
+| [**stm32pio-f723**](https://github.com/opo200tw/stm32pio-f723) | STM32F723 晶片 PlatformIO 韌體專案與驅動架構 |
 
 ---
 
@@ -51,6 +53,7 @@
 
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
+| [**GPM4_image_tool**](https://github.com/opo200tw/GPM4_image_tool) | GPM4 影像、圖標與點陣字型二進位轉換工具 |
 | [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | Cross-platform serial debug terminal (TUI + headless) for FTDI/CDC devices |
 | [**nrf-command-line-factory**](https://github.com/opo200tw/nrf-command-line-factory) | Nordic nRF52 晶片工廠端量產自動化燒錄與測試桌面工具（J-Link / nrfutil GUI/CLI） |
 
@@ -67,7 +70,9 @@
 | [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | 📦 **已歸檔** | [Deprecated] 早期 GeneralPlus GPM7 / GPA7 原廠 SDK V1.2 歷史版本，已由 UM-GPM7-SDK-v1.3.1 取代封存 |
 | [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
 | [**electron-vue3-serial**](https://github.com/opo200tw/electron-vue3-serial) | 📦 **已歸檔** | [Deprecated] 早期基於 Electron + Vue 3 開發之跨平台序列埠除錯終端，已封存 |
+| [**electron-vue3-serial-**](https://github.com/opo200tw/electron-vue3-serial-) | 📦 **已歸檔** | [Deprecated] 早期 Electron + Vue 3 序列埠通訊專案分支，已封存 |
 | [**inner_tool**](https://github.com/opo200tw/inner_tool) | 📦 **已歸檔** | [Deprecated] 早期內部原始碼格式化與代碼處理工具，已封存 |
+| [**test_tool**](https://github.com/opo200tw/test_tool) | 📦 **已歸檔** | [Deprecated] 早期測試輔助自動化腳本，已封存 |
 
 ---
 
@@ -77,9 +82,12 @@
 | :--- | :--- | :--- |
 | [**csv_parser**](https://github.com/opo200tw/csv_parser) | **⚙️ 嵌入式底層參考** | 純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔） |
 | [**crc32**](https://github.com/opo200tw/crc32) | **⚙️ 演算法原理參考** | 高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗） |
+| [**snagboot**](https://github.com/opo200tw/snagboot) | **⚙️ 燒錄與復原工具** | 嵌入式平台通用復原、開機導引與 Flash 燒錄工具 |
+| [**toolchains-builder**](https://github.com/opo200tw/toolchains-builder) | **⚙️ 編譯工具鏈建置** | 嵌入式 GCC 交叉編譯工具鏈建置與自動化腳本 |
 | [**RTSPtoWeb**](https://github.com/opo200tw/RTSPtoWeb) | **🎥 音視訊串流測試** | RTSP 轉 Web 播放伺服器（支援 WebRTC / MSE / HLS 瀏覽器即時預覽） |
 | [**html5_rtsp_player**](https://github.com/opo200tw/html5_rtsp_player) | **🎥 音視訊串流測試** | HTML5 RTSP 網頁播放器前端組件（免外掛瀏覽器播放） |
 | [**ipchub**](https://github.com/opo200tw/ipchub) | **🎥 音視訊串流測試** | 輕量級網路攝影機（IPC）流媒體伺服器與集中管理 |
+| [**jessibuca**](https://github.com/opo200tw/jessibuca) | **🎥 音視訊串流測試** | 開源純 H5 跨平台低延遲直播流播放器前端組件 |
 | [**lal**](https://github.com/opo200tw/lal) | **🎥 音視訊串流測試** | 高效能音視訊直播流媒體伺服器（RTMP / RTSP / HLS / HTTP-FLV） |
 | [**naza**](https://github.com/opo200tw/naza) | **🎥 音視訊串流測試** | Go 語言基礎公用函式庫（lal 串流伺服器依賴） |
 | [**faac**](https://github.com/opo200tw/faac) | **🔊 音訊轉碼參考** | AAC 音訊壓縮編碼庫（Freeware Advanced Audio Coder） |
