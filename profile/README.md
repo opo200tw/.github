@@ -45,7 +45,6 @@
 | :--- | :--- |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
-| [**stm32pio-f723**](https://github.com/opo200tw/stm32pio-f723) | STM32F723 晶片 PlatformIO 韌體專案與驅動架構 |
 
 ---
 
@@ -72,6 +71,7 @@
 | [**electron-vue3-serial**](https://github.com/opo200tw/electron-vue3-serial) | 📦 **已歸檔** | [Deprecated] 早期基於 Electron + Vue 3 開發之跨平台序列埠除錯終端，已封存 |
 | [**electron-vue3-serial-**](https://github.com/opo200tw/electron-vue3-serial-) | 📦 **已歸檔** | [Deprecated] 早期 Electron + Vue 3 序列埠通訊專案分支，已封存 |
 | [**inner_tool**](https://github.com/opo200tw/inner_tool) | 📦 **已歸檔** | [Deprecated] 早期內部原始碼格式化與代碼處理工具，已封存 |
+| [**stm32pio-f723**](https://github.com/opo200tw/stm32pio-f723) | 📦 **已歸檔** | [Deprecated] STM32F723 晶片 PlatformIO 韌體專案與驅動架構，已封存 |
 | [**test_tool**](https://github.com/opo200tw/test_tool) | 📦 **已歸檔** | [Deprecated] 早期測試輔助自動化腳本，已封存 |
 
 ---
