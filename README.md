@@ -21,15 +21,16 @@
 
 | 專案 / 儲存庫 | 狀態 / 角色 | 說明 |
 | :--- | :--- | :--- |
+| [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
 | [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
 | [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
+| [**UM-GPM7-camera-undistort**](https://github.com/opo200tw/UM-GPM7-camera-undistort) | **校準工具** | GPM7 相機鏡頭畸變校正表生成與雙光單應性對齊工具（OpenCV） |
 
 ### 🔬 感測器驅動與核心模組（Sensors & Core Modules）
 
 | 模組 / 儲存庫 | 適用硬體 / 類型 | 說明 |
 | :--- | :--- | :--- |
 | [**ESP32_ApplicationShield**](https://github.com/opo200tw/ESP32_ApplicationShield) | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
-| [**ESP32_ApplicationShield_HTPA**](https://github.com/opo200tw/ESP32_ApplicationShield_HTPA) | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
 | [**MLX90640-With-STM32**](https://github.com/opo200tw/MLX90640-With-STM32) | **MLX90640** | Melexis MLX90640 32×24 像素紅外熱成像陣列感測器驅動（STM32 平台） |
 | [**mbedtls**](https://github.com/opo200tw/mbedtls) | **SSL/TLS 加密** | 輕量級嵌入式 SSL/TLS 加密庫（作為 UM-GPM7-camera 內部 lib/mbedtls 與 lwIP 網路安全連線之核心基礎） |
 | [**ringbuff**](https://github.com/opo200tw/ringbuff) | **Lock-Free Buffer** | 高效無鎖環形緩衝區（作為 UM-GPM7-camera 內部 lib/RingBuffer Lock-Free SPSC 音視訊與通訊緩衝之核心基礎） |
@@ -41,11 +42,8 @@
 
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
-| [**EMDR**](https://github.com/opo200tw/EMDR) | EMDR 相關專案韌體 |
+| [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
-| [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 早期呼叫器與遙控器歷史專案保存 |
-| [**faaclib**](https://github.com/opo200tw/faaclib) | GPM4 |
-| [**sdk_ref_v1.3.1**](https://github.com/opo200tw/sdk_ref_v1.3.1) | 嵌入式韌體專案 |
 
 ---
 
@@ -54,7 +52,6 @@
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
 | [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | Cross-platform serial debug terminal (TUI + headless) for FTDI/CDC devices |
-| [**image_tool**](https://github.com/opo200tw/image_tool) | OpenCV 相機校準輔助工具（熱成像與可見光 Homography 對齊、凌通專用畸變表生成） |
 
 ---
 
@@ -62,10 +59,12 @@
 
 | 專案 / 儲存庫 | 狀態 | 歸檔說明 |
 | :--- | :--- | :--- |
-| [**GPA7XXXA_V1.2**](https://github.com/opo200tw/GPA7XXXA_V1.2) | 📦 **已歸檔** | 歷史專案已歸檔封存 |
-| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔** | [Deprecated] 早期原型專案已廢棄，功能由 camera 與獨立 sensor 模組取代 |
-| [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔** | [Deprecated] 原為 UM-GPM7-camera 的 sensor，現已廢棄停用，僅供歷史參考 |
+| [**ESP32_ApplicationShield_HTPA**](https://github.com/opo200tw/ESP32_ApplicationShield_HTPA) | 📦 **已歸檔** | [Deprecated] Heimann HTPAd 熱成像感測器舊版驅動快照，已被 ESP32_ApplicationShield 最新版取代封存 |
+| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔** | [Deprecated] 早期熱成像原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/HTPA，Target: HTPA) |
+| [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔** | [Deprecated] 早期 TOF 測距原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/TOF，Target: TOF) |
 | [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
+| [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | 📦 **已歸檔** | [Deprecated] 早期 GeneralPlus GPM7 / GPA7 原廠 SDK V1.2 歷史版本，已由 UM-GPM7-SDK-v1.3.1 取代封存 |
+| [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
 
 ---
 
@@ -80,7 +79,6 @@
 | [**ipchub**](https://github.com/opo200tw/ipchub) | **🎥 音視訊串流測試** | 輕量級網路攝影機（IPC）流媒體伺服器與集中管理 |
 | [**lal**](https://github.com/opo200tw/lal) | **🎥 音視訊串流測試** | 高效能音視訊直播流媒體伺服器（RTMP / RTSP / HLS / HTTP-FLV） |
 | [**naza**](https://github.com/opo200tw/naza) | **🎥 音視訊串流測試** | Go 語言基礎公用函式庫（lal 串流伺服器依賴） |
-| [**stm32cube-platformio-freertos**](https://github.com/opo200tw/stm32cube-platformio-freertos) | **📚 基礎庫** |  |
 | [**faac**](https://github.com/opo200tw/faac) | **🔊 音訊轉碼參考** | AAC 音訊壓縮編碼庫（Freeware Advanced Audio Coder） |
 | [**libg7112aac**](https://github.com/opo200tw/libg7112aac) | **🔊 音訊轉碼參考** | 嵌入式音訊轉碼庫（G.711 語音編碼 ➔ AAC 格式轉換） |
 | [**doc**](https://github.com/opo200tw/doc) | **🔐 網路協定文件** | 音視訊 RFC 標準協議規範與測試用音視訊檔案庫 |
