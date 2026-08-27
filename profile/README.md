@@ -10,9 +10,8 @@
 
 | 專案 / 儲存庫 | 角色與定位 | 說明 |
 | :--- | :--- | :--- |
-| [**AnimalSpeaker**](https://github.com/opo200tw/AnimalSpeaker) | **產品韌體正本（Canonical）** | 包含 HandUnit（發射端）、Speaker（接收端）、Bootloader 與 BLE 通訊協定。日常開發與維護的核心儲存庫。 |
+| [**UM-GPM4-AnimalSpeaker**](https://github.com/opo200tw/UM-GPM4-AnimalSpeaker) | **產品韌體正本（Canonical）** | 雙機式動物呼叫器產品韌體（HandUnit 發射端 + Speaker 接收端 + Bootloader + BLE 通訊協定）。日常開發正本。 |
 | [**UM-GPM4**](https://github.com/opo200tw/UM-GPM4) | **平台對照庫（Platform Umbrella）** | GeneralPlus GPM47XXA 原廠 SDK 多版本（`v1.0.3`、`v1.0.4-release`、`v1.0.4-2ndboot`）鏡像與 Meson 工具鏈對照。 |
-| [**UM-GPM4-AnimalSpeaker**](https://github.com/opo200tw/UM-GPM4-AnimalSpeaker) | **平台衍生鏡像** | GPM4 平台 Umbrella 的 AnimalSpeaker 歷史 subtree 快照保存。 |
 
 ---
 
