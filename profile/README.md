@@ -24,6 +24,7 @@
 | [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
 | [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
 | [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
+| [**UM-GPM7-camera-undistort**](https://github.com/opo200tw/UM-GPM7-camera-undistort) | **校準工具** | GPM7 相機鏡頭畸變校正表生成與雙光單應性對齊工具（OpenCV） |
 
 ### 🔬 感測器驅動與硬體參考（Sensors & Hardware Reference）
 
@@ -51,7 +52,6 @@
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
 | [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | Cross-platform serial debug terminal (TUI + headless) for FTDI/CDC devices |
-| [**image_tool**](https://github.com/opo200tw/image_tool) | OpenCV 相機校準輔助工具（熱成像與可見光 Homography 對齊、凌通專用畸變表生成） |
 
 ---
 
