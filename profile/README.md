@@ -66,6 +66,7 @@
 | [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
 | [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | 📦 **已歸檔** | [Deprecated] 早期 GeneralPlus GPM7 / GPA7 原廠 SDK V1.2 歷史版本，已由 UM-GPM7-SDK-v1.3.1 取代封存 |
 | [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
+| [**electron-vue3-serial**](https://github.com/opo200tw/electron-vue3-serial) | 📦 **已歸檔** | [Deprecated] 早期基於 Electron + Vue 3 開發之跨平台序列埠除錯終端，已封存 |
 | [**inner_tool**](https://github.com/opo200tw/inner_tool) | 📦 **已歸檔** | [Deprecated] 早期內部原始碼格式化與代碼處理工具，已封存 |
 
 ---
