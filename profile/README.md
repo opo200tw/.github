@@ -21,6 +21,7 @@
 
 | 專案 / 儲存庫 | 狀態 / 角色 | 說明 |
 | :--- | :--- | :--- |
+| [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
 | [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
 | [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
 
@@ -39,11 +40,10 @@
 
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
-| [**EMDR**](https://github.com/opo200tw/EMDR) | EMDR 相關專案韌體 |
+| [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
 | [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 早期呼叫器與遙控器歷史專案保存 |
 | [**faaclib**](https://github.com/opo200tw/faaclib) | GPM4 |
-| [**sdk_ref_v1.3.1**](https://github.com/opo200tw/sdk_ref_v1.3.1) | 嵌入式韌體專案 |
 
 ---
 
