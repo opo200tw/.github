@@ -73,7 +73,7 @@
 | :--- | :--- | :--- |
 | [**crc32**](https://github.com/opo200tw/crc32) | **⚙️ 嵌入式底層與工具** | 高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗） |
 | [**csv_parser**](https://github.com/opo200tw/csv_parser) | **⚙️ 嵌入式底層與工具** | 純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔） |
-| [**ringbuff**](https://github.com/opo200tw/ringbuff) | **⚙️ 嵌入式底層與工具** | 輕量級環形緩衝區管理庫（LWRB，用於串口/音訊/感測器數據流隊列） |
+| [**ringbuff**](https://github.com/opo200tw/ringbuff) | **⚙️ 嵌入式底層與工具** | 高效無鎖環形緩衝區（作為 UM-GPM7-camera 內部 lib/RingBuffer Lock-Free SPSC 音視訊與通訊緩衝之核心基礎） |
 | [**stm32cube-platformio-freertos**](https://github.com/opo200tw/stm32cube-platformio-freertos) | **⚙️ 嵌入式底層與工具** | STM32Cube 結合 PlatformIO 與 FreeRTOS 專案環境參考 |
 | [**RTSPtoWeb**](https://github.com/opo200tw/RTSPtoWeb) | **🎥 音視訊串流** | RTSP 轉 Web 播放伺服器（支援 WebRTC / MSE / HLS 瀏覽器即時預覽） |
 | [**html5_rtsp_player**](https://github.com/opo200tw/html5_rtsp_player) | **🎥 音視訊串流** | HTML5 RTSP 網頁播放器前端組件（免外掛瀏覽器播放） |
@@ -106,5 +106,5 @@
 
 ### 📝 日常維護方式（Maintenance Guide）
 - **修改專案說明**：只需直接在各 Repo 的 GitHub 設定頁（About 齒輪）修改 `Description`，Action 就會自動抓取最新說明並填入表格。
-- **專案歸檔**：將 Repo 設為 `Archive` 後，Action 就會自動將該專案移至【📦 已歸檔專案】區塊。
+- **專案歸檔**：將 Repo 設為 `Archive` 後，Action 會自動將該專案移至【📦 已歸檔專案】區塊。
 - **安全防護機制**：腳本內建防呆驗證，若權限異常或抓取數量不足，會自動中止執行，防止覆蓋現有完整目錄。
