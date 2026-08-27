@@ -21,8 +21,9 @@
 | :--- | :--- | :--- |
 | [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P）。 |
 | [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫。 |
+| [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔（Archived）** | 早期 GPM4 晶片相機 RTSP 原型專案。因平台升級至 GPM7（`UM-GPM7-camera`）已廢棄停用。 |
 | [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔（Archived）** | 原為 `UM-GPM7-camera` 的 Sensor（TOF 測距與感測器模組），現已廢棄停用。 |
-| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔（Archived）** | 早期 GPA7 原型專案，功能已被 `UM-GPM7-camera` 等專案取代。 |
+| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔（Archived）** | 早期 GPA7 原型專案，功能已被 `UM-GPM7-camera` 取代。 |
 
 ---
 
@@ -42,7 +43,6 @@
 | :--- | :--- |
 | [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | 跨平台序列埠除錯終端工具（TUI + Headless），支援 FTDI / CDC 設備。 |
 | [**image_tool**](https://github.com/opo200tw/image_tool) | OpenCV 相機校準輔助工具（熱成像與可見光 Homography 對齊、凌通專用畸變表生成）。 |
-| [**rtsp_demo**](https://github.com/opo200tw/rtsp_demo) | RTSP 串流測試與驗證 Demo。 |
 
 ---
 
