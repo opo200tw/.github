@@ -21,8 +21,8 @@
 | :--- | :--- | :--- |
 | [**camera**](https://github.com/opo200tw/camera) | **主要專案** | A7 影像系統主程式韌體 |
 | [**camera-docs**](https://github.com/opo200tw/camera-docs) | **技術手冊** | 相機相關技術手冊與 PDF 規格文件庫（1:1 路徑對照） |
-| [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | **Sensor 模組** | 用於 `UM-GPM7-camera` 的 Sensor（TOF 測距與感測器模組） |
-| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | ⚠️ **已廢棄（Deprecated）** | 早期 GPA7 / Wi-Fi / P2P 原型專案。因架構重組、功能已解耦拆分並由後續專案（如 `camera` 與獨立 sensor 模組）取代，僅保留歷史參考。 |
+| [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | ⚠️ **已廢棄（Deprecated）** | 原為 `UM-GPM7-camera` 的 Sensor（TOF 測距與感測器模組），現已廢棄停用，僅供歷史代碼參考。 |
+| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | ⚠️ **已廢棄（Deprecated）** | 早期 GPA7 / Wi-Fi / P2P 原型專案。因架構重組、功能已解耦拆分並由後續專案（如 `camera` 等）取代，僅供歷史代碼參考。 |
 
 ---
 
