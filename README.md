@@ -53,7 +53,7 @@
 
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
-| [**GPM4_image_tool**](https://github.com/opo200tw/GPM4_image_tool) | GPM4 影像、圖標與點陣字型二進位轉換工具 |
+| [**UM-GPM4-image-tool**](https://github.com/opo200tw/UM-GPM4-image-tool) | GeneralPlus GPM4 晶片 TFT-LCD 螢幕 UI 影像轉換工具：將 PNG/JPG 圖標轉換為 RGBA/ARGB C Header 點陣陣列（用於 HandUnit 遙控器選單與 UI 資源） |
 | [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | Cross-platform serial debug terminal (TUI + headless) for FTDI/CDC devices |
 | [**nrf-command-line-factory**](https://github.com/opo200tw/nrf-command-line-factory) | Nordic nRF52 晶片工廠端量產自動化燒錄與測試桌面工具（J-Link / nrfutil GUI/CLI） |
 
