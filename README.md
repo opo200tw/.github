@@ -71,3 +71,24 @@
 ## 📚 常用通訊與基礎庫鏡像（Reference & Libraries）
 
 - `RTSPtoWeb`、`colorbar`、`crc32`、`csv_parser`、`doc`、`faac`、`html5_rtsp_player`、`ipchub`、`lal`、`leptonica`、`libg7112aac`、`mbedtls`、`naza`、`ringbuff`、`stb`、`stm32cube-platformio-freertos`
+
+---
+
+## ⚙️ 組織首頁自動同步機制（GitHub Actions Automation）
+
+本首頁目錄由 [**GitHub Actions (`sync-profile.yml`)**](https://github.com/opo200tw/.github/actions/workflows/sync-profile.yml) 搭配 [`generate_readme.py`](https://github.com/opo200tw/.github/blob/main/generate_readme.py) 自動維護與生成：
+
+### 🔄 預期觸發方式（Trigger Actions）
+1. **⏰ 每日自動排程（Scheduled Sync）**：
+   - 每天台灣時間 **早上 08:00（UTC 00:00）** 自動巡檢組織內所有 Repositories，自動偵測新增、改名、修改描述或歸檔狀態並同步更新。
+2. **🔘 手動一鍵即時觸發（Manual Trigger）**：
+   - 若剛完成 Repo 新增、改名或歸檔，可隨時前往 👉 [**Actions 頁面**](https://github.com/opo200tw/.github/actions/workflows/sync-profile.yml) 點擊 **`Run workflow`** 按鈕，約 15 秒內即可完成首頁刷新。
+3. **💻 本機 CLI 一行觸發（CLI Trigger）**：
+   ```bash
+   gh workflow run sync-profile.yml --repo opo200tw/.github
+   ```
+
+### 📝 日常維護方式（Maintenance Guide）
+- **修改專案說明**：只需直接在各 Repo 的 GitHub 設定頁（About 齒輪）修改 `Description`，Action 就會自動抓取最新說明並填入表格。
+- **專案歸檔**：將 Repo 設為 `Archive` 後，Action 會自動將該專案移至【📦 已歸檔專案】區塊。
+- **安全防護機制**：腳本內建防呆驗證，若權限異常或抓取數量不足，會自動中止執行，防止覆蓋現有完整目錄。
