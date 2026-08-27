@@ -39,7 +39,7 @@
 
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
-| [**EMDR**](https://github.com/opo200tw/EMDR) | EMDR 相關專案韌體 |
+| [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
 | [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 早期呼叫器與遙控器歷史專案保存 |
 | [**faaclib**](https://github.com/opo200tw/faaclib) | GPM4 |
