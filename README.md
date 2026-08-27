@@ -44,6 +44,7 @@
 | :--- | :--- |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
+| [**nrf-command-line-factory**](https://github.com/opo200tw/nrf-command-line-factory) | Nordic nRF52 晶片工廠端量產自動化燒錄與測試桌面工具（J-Link / nrfutil GUI/CLI） |
 
 ---
 
