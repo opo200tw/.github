@@ -31,6 +31,9 @@ def main():
         "x-cube-tof1"
     }
 
+    # 忽略的展示/內部庫名單
+    ignored_repo_names = {".github", "demo-repository"}
+
     for r in repos:
         name = r.get("name", "")
         desc = r.get("description") or ""
@@ -38,7 +41,7 @@ def main():
         is_fork = r.get("isFork", False)
         url = r.get("url", f"https://github.com/opo200tw/{name}")
 
-        if name == ".github":
+        if name in ignored_repo_names:
             continue
 
         item = {
