@@ -28,7 +28,8 @@ def main():
         "ESP32_ApplicationShield",
         "ESP32_ApplicationShield_HTPA",
         "MLX90640-With-STM32",
-        "x-cube-tof1"
+        "x-cube-tof1",
+        "ringbuff"
     }
 
     # 忽略的展示/內部庫名單
@@ -85,6 +86,8 @@ def main():
                 item["desc"] = "Melexis MLX90640 32×24 像素紅外熱成像陣列感測器驅動（STM32 平台）"
             elif "tof" in name.lower():
                 item["desc"] = "ST VL53L1 / VL53L4 TOF（Time-of-Flight）雷射測距感測器驅動套件"
+            elif "ringbuff" in name.lower():
+                item["desc"] = "高效無鎖環形緩衝區（作為 UM-GPM7-camera 內部 lib/RingBuffer Lock-Free SPSC 音視訊與通訊緩衝之核心基礎）"
             camera_sensor_repos.append(item)
             continue
 
@@ -162,13 +165,13 @@ def main():
     if camera_sensor_repos:
         lines.extend([
             "",
-            "### 🔬 感測器驅動與硬體參考（Sensors & Hardware Reference）",
+            "### 🔬 感測器驅動與核心模組（Sensors & Core Modules）",
             "",
-            "| 感測器 / 儲存庫 | 適用感測器型號 | 說明 |",
+            "| 模組 / 儲存庫 | 適用硬體 / 類型 | 說明 |",
             "| :--- | :--- | :--- |"
         ])
         for r in camera_sensor_repos:
-            sensor_tag = "Heimann HTPAd" if "ESP32" in r["name"] else ("MLX90640" if "MLX" in r["name"] else "VL53L4 TOF")
+            sensor_tag = "Heimann HTPAd" if "ESP32" in r["name"] else ("MLX90640" if "MLX" in r["name"] else ("Lock-Free Buffer" if "ringbuff" in r["name"] else "VL53L4 TOF"))
             lines.append(f"| [**{r['name']}**]({r['url']}) | **{sensor_tag}** | {r['desc']} |")
 
     if embedded_repos:

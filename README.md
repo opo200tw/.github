@@ -24,13 +24,14 @@
 | [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
 | [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
 
-### 🔬 感測器驅動與硬體參考（Sensors & Hardware Reference）
+### 🔬 感測器驅動與核心模組（Sensors & Core Modules）
 
-| 感測器 / 儲存庫 | 適用感測器型號 | 說明 |
+| 模組 / 儲存庫 | 適用硬體 / 類型 | 說明 |
 | :--- | :--- | :--- |
 | [**ESP32_ApplicationShield**](https://github.com/opo200tw/ESP32_ApplicationShield) | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
 | [**ESP32_ApplicationShield_HTPA**](https://github.com/opo200tw/ESP32_ApplicationShield_HTPA) | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
 | [**MLX90640-With-STM32**](https://github.com/opo200tw/MLX90640-With-STM32) | **MLX90640** | Melexis MLX90640 32×24 像素紅外熱成像陣列感測器驅動（STM32 平台） |
+| [**ringbuff**](https://github.com/opo200tw/ringbuff) | **Lock-Free Buffer** | 高效無鎖環形緩衝區（作為 UM-GPM7-camera 內部 lib/RingBuffer Lock-Free SPSC 音視訊與通訊緩衝之核心基礎） |
 | [**x-cube-tof1**](https://github.com/opo200tw/x-cube-tof1) | **VL53L4 TOF** | ST VL53L1 / VL53L4 TOF（Time-of-Flight）雷射測距感測器驅動套件 |
 
 ---
@@ -73,7 +74,6 @@
 | :--- | :--- | :--- |
 | [**crc32**](https://github.com/opo200tw/crc32) | **⚙️ 嵌入式底層與工具** | 高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗） |
 | [**csv_parser**](https://github.com/opo200tw/csv_parser) | **⚙️ 嵌入式底層與工具** | 純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔） |
-| [**ringbuff**](https://github.com/opo200tw/ringbuff) | **⚙️ 嵌入式底層與工具** | 高效無鎖環形緩衝區（作為 UM-GPM7-camera 內部 lib/RingBuffer Lock-Free SPSC 音視訊與通訊緩衝之核心基礎） |
 | [**stm32cube-platformio-freertos**](https://github.com/opo200tw/stm32cube-platformio-freertos) | **⚙️ 嵌入式底層與工具** | STM32Cube 結合 PlatformIO 與 FreeRTOS 專案環境參考 |
 | [**RTSPtoWeb**](https://github.com/opo200tw/RTSPtoWeb) | **🎥 音視訊串流** | RTSP 轉 Web 播放伺服器（支援 WebRTC / MSE / HLS 瀏覽器即時預覽） |
 | [**html5_rtsp_player**](https://github.com/opo200tw/html5_rtsp_player) | **🎥 音視訊串流** | HTML5 RTSP 網頁播放器前端組件（免外掛瀏覽器播放） |
