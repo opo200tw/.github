@@ -11,18 +11,25 @@ def main():
     with open(json_path, "r", encoding="utf-8") as f:
         repos = json.load(f)
 
-    # 安全防呆：如果抓取的 repo 數量過少（例如沒有權限只抓到公開 repo），中斷執行避免覆蓋
     if len(repos) < 10:
-        print(f"Error: Only {len(repos)} repositories fetched. Missing private repo permissions? Aborting to prevent overwriting profile.")
+        print(f"Error: Only {len(repos)} repositories fetched. Missing private repo permissions? Aborting.")
         sys.exit(1)
 
     animal_speaker_repos = []
     camera_active_repos = []
-    camera_archived_repos = []
+    camera_sensor_repos = []
     embedded_repos = []
     tool_repos = []
-    other_archived_repos = []
+    archived_repos = []
     fork_repos = []
+
+    # 4 個感測器專用庫名單
+    sensor_repo_names = {
+        "ESP32_ApplicationShield",
+        "ESP32_ApplicationShield_HTPA",
+        "MLX90640-With-STM32",
+        "x-cube-tof1"
+    }
 
     for r in repos:
         name = r.get("name", "")
@@ -42,45 +49,54 @@ def main():
             "is_fork": is_fork
         }
 
-        # 1. 外部 Fork 基礎庫
+        # 1. 已歸檔專案（獨立專區）
+        if is_archived:
+            archived_repos.append(item)
+            continue
+
+        # 2. 相機與感測器參考庫（優先於一般 Fork 判定）
+        if name in sensor_repo_names:
+            if "ESP32" in name:
+                item["desc"] = "Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台）"
+            elif "MLX90640" in name:
+                item["desc"] = "Melexis MLX90640 32×24 像素紅外熱成像陣列感測器驅動（STM32 平台）"
+            elif "tof" in name.lower():
+                item["desc"] = "ST VL53L1 / VL53L4 TOF（Time-of-Flight）雷射測距感測器驅動套件"
+            camera_sensor_repos.append(item)
+            continue
+
+        # 3. 外部 Fork 基礎庫
         if is_fork:
             fork_repos.append(item)
             continue
 
-        # 2. 已歸檔專案分類
-        if is_archived:
-            if "camera" in name.lower() or "thermal" in name.lower() or "gpa7" in name.lower():
-                camera_archived_repos.append(item)
-            else:
-                other_archived_repos.append(item)
-            continue
-
-        # 3. Animal Speaker / GPM4 系列
+        # 4. Animal Speaker / GPM4 系列
         if "animalspeaker" in name.lower() or name == "UM-GPM4":
             item["role"] = "產品韌體正本（Canonical）" if "animalspeaker" in name.lower() else "平台對照庫（Platform Umbrella）"
             animal_speaker_repos.append(item)
             continue
 
-        # 4. 相機與感測系統
+        # 5. 相機與影像系統主專案
         if "camera" in name.lower() or "gpm7" in name.lower() or "thermal" in name.lower():
             item["role"] = "技術手冊" if "docs" in name.lower() else "主要專案"
             camera_active_repos.append(item)
             continue
 
-        # 5. 工具類
+        # 6. 工具類
         if "term" in name.lower() or "tool" in name.lower() or "demo" in name.lower():
             tool_repos.append(item)
             continue
 
-        # 6. 其他嵌入式
+        # 7. 其他嵌入式
         embedded_repos.append(item)
 
     # 排序
     animal_speaker_repos.sort(key=lambda x: x["name"])
     camera_active_repos.sort(key=lambda x: x["name"])
-    camera_archived_repos.sort(key=lambda x: x["name"])
+    camera_sensor_repos.sort(key=lambda x: x["name"])
     embedded_repos.sort(key=lambda x: x["name"])
     tool_repos.sort(key=lambda x: x["name"])
+    archived_repos.sort(key=lambda x: x["name"])
     fork_repos.sort(key=lambda x: x["name"])
 
     # 渲染 Markdown
@@ -108,14 +124,26 @@ def main():
         "",
         "## 📷 影像、相機與感測系統（Vision, Camera & Sensing）",
         "",
+        "### 核心專案與文件",
+        "",
         "| 專案 / 儲存庫 | 狀態 / 角色 | 說明 |",
         "| :--- | :--- | :--- |"
     ])
 
     for r in camera_active_repos:
         lines.append(f"| [**{r['name']}**]({r['url']}) | **{r.get('role', '主要專案')}** | {r['desc'] or '相機專案'} |")
-    for r in camera_archived_repos:
-        lines.append(f"| [**{r['name']}**]({r['url']}) | 📦 **已歸檔（Archived）** | {r['desc'] or '歷史專案已歸檔'} |")
+
+    if camera_sensor_repos:
+        lines.extend([
+            "",
+            "### 🔬 感測器驅動與硬體參考（Sensors & Hardware Reference）",
+            "",
+            "| 感測器 / 儲存庫 | 適用感測器型號 | 說明 |",
+            "| :--- | :--- | :--- |"
+        ])
+        for r in camera_sensor_repos:
+            sensor_tag = "Heimann HTPAd" if "ESP32" in r["name"] else ("MLX90640" if "MLX" in r["name"] else "VL53L4 TOF")
+            lines.append(f"| [**{r['name']}**]({r['url']}) | **{sensor_tag}** | {r['desc']} |")
 
     if embedded_repos:
         lines.extend([
@@ -143,6 +171,19 @@ def main():
         for r in tool_repos:
             lines.append(f"| [**{r['name']}**]({r['url']}) | {r['desc'] or '開發與輔助工具'} |")
 
+    if archived_repos:
+        lines.extend([
+            "",
+            "---",
+            "",
+            "## 📦 已歸檔專案（Archived Projects）",
+            "",
+            "| 專案 / 儲存庫 | 狀態 | 歸檔說明 |",
+            "| :--- | :--- | :--- |"
+        ])
+        for r in archived_repos:
+            lines.append(f"| [**{r['name']}**]({r['url']}) | 📦 **已歸檔** | {r['desc'] or '歷史專案已歸檔封存'} |")
+
     if fork_repos:
         lines.extend([
             "",
@@ -157,7 +198,6 @@ def main():
     lines.append("")
     output_content = "\n".join(lines)
 
-    # 輸出至檔案
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(output_content)
 
