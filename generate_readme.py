@@ -34,6 +34,26 @@ def main():
     # 忽略的展示/內部庫名單
     ignored_repo_names = {".github", "demo-repository"}
 
+    # 外部基礎庫詳細說明與分類字典
+    ref_descriptions = {
+        "RTSPtoWeb": ("🎥 音視訊串流", "RTSP 轉 Web 播放伺服器（支援 WebRTC / MSE / HLS 瀏覽器即時預覽）"),
+        "html5_rtsp_player": ("🎥 音視訊串流", "HTML5 RTSP 網頁播放器前端組件（免外掛瀏覽器播放）"),
+        "ipchub": ("🎥 音視訊串流", "輕量級網路攝影機（IPC）流媒體伺服器與集中管理"),
+        "lal": ("🎥 音視訊串流", "高效能音視訊直播流媒體伺服器（RTMP / RTSP / HLS / HTTP-FLV）"),
+        "naza": ("🎥 音視訊串流", "Go 語言基礎公用函式庫（lal 串流伺服器依賴）"),
+        "faac": ("🔊 音訊編碼與轉碼", "AAC 音訊壓縮編碼庫（Freeware Advanced Audio Coder）"),
+        "libg7112aac": ("🔊 音訊編碼與轉碼", "嵌入式音訊轉碼庫（G.711 語音編碼 ➔ AAC 格式轉換）"),
+        "colorbar": ("🖼️ 影像處理與測試", "彩色測試圖條生成器（生成 RGB/YUV 各解析度測試圖，用於相機 ISP 除錯）"),
+        "leptonica": ("🖼️ 影像處理與測試", "C 語言高效影像分析與幾何轉換演算法庫"),
+        "stb": ("🖼️ 影像處理與測試", "知名 C/C++ Header-only 單檔工具庫（stb_image, stb_truetype 等）"),
+        "ringbuff": ("⚙️ 嵌入式底層與工具", "輕量級環形緩衝區管理庫（LWRB，用於串口/音訊/感測器數據流隊列）"),
+        "csv_parser": ("⚙️ 嵌入式底層與工具", "純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔）"),
+        "crc32": ("⚙️ 嵌入式底層與工具", "高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗）"),
+        "stm32cube-platformio-freertos": ("⚙️ 嵌入式底層與工具", "STM32Cube 結合 PlatformIO 與 FreeRTOS 專案環境參考"),
+        "mbedtls": ("🔐 網路安全與協定文件", "輕量級嵌入式 SSL/TLS 加密與安全演算法庫（Arm 原廠開源）"),
+        "doc": ("🔐 網路安全與協定文件", "音視訊 RFC 標準協議規範與測試用音視訊檔案庫"),
+    }
+
     for r in repos:
         name = r.get("name", "")
         desc = r.get("description") or ""
@@ -70,6 +90,9 @@ def main():
 
         # 3. 外部 Fork 基礎庫
         if is_fork:
+            category, custom_desc = ref_descriptions.get(name, ("📚 基礎庫", desc))
+            item["category"] = category
+            item["desc"] = custom_desc
             fork_repos.append(item)
             continue
 
@@ -100,7 +123,7 @@ def main():
     embedded_repos.sort(key=lambda x: x["name"])
     tool_repos.sort(key=lambda x: x["name"])
     archived_repos.sort(key=lambda x: x["name"])
-    fork_repos.sort(key=lambda x: x["name"])
+    fork_repos.sort(key=lambda x: (x.get("category", ""), x["name"]))
 
     # 渲染 Markdown
     lines = [
@@ -193,10 +216,12 @@ def main():
             "---",
             "",
             "## 📚 常用通訊與基礎庫鏡像（Reference & Libraries）",
-            ""
+            "",
+            "| 儲存庫 / 鏡像 | 領域 / 分類 | 說明與用途 |",
+            "| :--- | :--- | :--- |"
         ])
-        fork_links = [f"`{r['name']}`" for r in fork_repos]
-        lines.append("- " + "、".join(fork_links))
+        for r in fork_repos:
+            lines.append(f"| [**{r['name']}**]({r['url']}) | **{r.get('category', '基礎庫')}** | {r['desc']} |")
 
     # 加入 Action 自動化維護與觸發說明區塊
     lines.extend([
@@ -219,7 +244,7 @@ def main():
         "",
         "### 📝 日常維護方式（Maintenance Guide）",
         "- **修改專案說明**：只需直接在各 Repo 的 GitHub 設定頁（About 齒輪）修改 `Description`，Action 就會自動抓取最新說明並填入表格。",
-        "- **專案歸檔**：將 Repo 設為 `Archive` 後，Action 會自動將該專案移至【📦 已歸檔專案】區塊。",
+        "- **專案歸檔**：將 Repo 設為 `Archive` 後，Action 就會自動將該專案移至【📦 已歸檔專案】區塊。",
         "- **安全防護機制**：腳本內建防呆驗證，若權限異常或抓取數量不足，會自動中止執行，防止覆蓋現有完整目錄。"
     ])
 

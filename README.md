@@ -69,7 +69,24 @@
 
 ## 📚 常用通訊與基礎庫鏡像（Reference & Libraries）
 
-- `RTSPtoWeb`、`colorbar`、`crc32`、`csv_parser`、`doc`、`faac`、`html5_rtsp_player`、`ipchub`、`lal`、`leptonica`、`libg7112aac`、`mbedtls`、`naza`、`ringbuff`、`stb`、`stm32cube-platformio-freertos`
+| 儲存庫 / 鏡像 | 領域 / 分類 | 說明與用途 |
+| :--- | :--- | :--- |
+| [**crc32**](https://github.com/opo200tw/crc32) | **⚙️ 嵌入式底層與工具** | 高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗） |
+| [**csv_parser**](https://github.com/opo200tw/csv_parser) | **⚙️ 嵌入式底層與工具** | 純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔） |
+| [**ringbuff**](https://github.com/opo200tw/ringbuff) | **⚙️ 嵌入式底層與工具** | 輕量級環形緩衝區管理庫（LWRB，用於串口/音訊/感測器數據流隊列） |
+| [**stm32cube-platformio-freertos**](https://github.com/opo200tw/stm32cube-platformio-freertos) | **⚙️ 嵌入式底層與工具** | STM32Cube 結合 PlatformIO 與 FreeRTOS 專案環境參考 |
+| [**RTSPtoWeb**](https://github.com/opo200tw/RTSPtoWeb) | **🎥 音視訊串流** | RTSP 轉 Web 播放伺服器（支援 WebRTC / MSE / HLS 瀏覽器即時預覽） |
+| [**html5_rtsp_player**](https://github.com/opo200tw/html5_rtsp_player) | **🎥 音視訊串流** | HTML5 RTSP 網頁播放器前端組件（免外掛瀏覽器播放） |
+| [**ipchub**](https://github.com/opo200tw/ipchub) | **🎥 音視訊串流** | 輕量級網路攝影機（IPC）流媒體伺服器與集中管理 |
+| [**lal**](https://github.com/opo200tw/lal) | **🎥 音視訊串流** | 高效能音視訊直播流媒體伺服器（RTMP / RTSP / HLS / HTTP-FLV） |
+| [**naza**](https://github.com/opo200tw/naza) | **🎥 音視訊串流** | Go 語言基礎公用函式庫（lal 串流伺服器依賴） |
+| [**faac**](https://github.com/opo200tw/faac) | **🔊 音訊編碼與轉碼** | AAC 音訊壓縮編碼庫（Freeware Advanced Audio Coder） |
+| [**libg7112aac**](https://github.com/opo200tw/libg7112aac) | **🔊 音訊編碼與轉碼** | 嵌入式音訊轉碼庫（G.711 語音編碼 ➔ AAC 格式轉換） |
+| [**doc**](https://github.com/opo200tw/doc) | **🔐 網路安全與協定文件** | 音視訊 RFC 標準協議規範與測試用音視訊檔案庫 |
+| [**mbedtls**](https://github.com/opo200tw/mbedtls) | **🔐 網路安全與協定文件** | 輕量級嵌入式 SSL/TLS 加密與安全演算法庫（Arm 原廠開源） |
+| [**colorbar**](https://github.com/opo200tw/colorbar) | **🖼️ 影像處理與測試** | 彩色測試圖條生成器（生成 RGB/YUV 各解析度測試圖，用於相機 ISP 除錯） |
+| [**leptonica**](https://github.com/opo200tw/leptonica) | **🖼️ 影像處理與測試** | C 語言高效影像分析與幾何轉換演算法庫 |
+| [**stb**](https://github.com/opo200tw/stb) | **🖼️ 影像處理與測試** | 知名 C/C++ Header-only 單檔工具庫（stb_image, stb_truetype 等） |
 
 ---
 
@@ -89,5 +106,5 @@
 
 ### 📝 日常維護方式（Maintenance Guide）
 - **修改專案說明**：只需直接在各 Repo 的 GitHub 設定頁（About 齒輪）修改 `Description`，Action 就會自動抓取最新說明並填入表格。
-- **專案歸檔**：將 Repo 設為 `Archive` 後，Action 會自動將該專案移至【📦 已歸檔專案】區塊。
+- **專案歸檔**：將 Repo 設為 `Archive` 後，Action 就會自動將該專案移至【📦 已歸檔專案】區塊。
 - **安全防護機制**：腳本內建防呆驗證，若權限異常或抓取數量不足，會自動中止執行，防止覆蓋現有完整目錄。
