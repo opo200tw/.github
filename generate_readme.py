@@ -117,7 +117,7 @@ def main():
             continue
 
         # 6. 工具類
-        if "term" in name.lower() or "tool" in name.lower() or "demo" in name.lower():
+        if "term" in name.lower() or "tool" in name.lower() or "demo" in name.lower() or "factory" in name.lower():
             tool_repos.append(item)
             continue
 
