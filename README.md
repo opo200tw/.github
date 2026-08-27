@@ -15,13 +15,14 @@
 
 ---
 
-## 📷 影像與感測系統（Vision & Sensing）
+## 📷 影像、相機與感測系統（Vision, Camera & Sensing）
 
-| 專案 / 儲存庫 | 說明 |
-| :--- | :--- |
-| [**camera**](https://github.com/opo200tw/camera) | A7 影像系統主程式韌體 |
-| [**camera-docs**](https://github.com/opo200tw/camera-docs) | 相機相關技術手冊與 PDF 規格文件庫 |
-| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) / [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 紅外熱成像與 TOF 測距系統韌體 |
+| 專案 / 儲存庫 | 狀態 / 角色 | 說明 |
+| :--- | :--- | :--- |
+| [**camera**](https://github.com/opo200tw/camera) | **主要專案** | A7 影像系統主程式韌體 |
+| [**camera-docs**](https://github.com/opo200tw/camera-docs) | **技術手冊** | 相機相關技術手冊與 PDF 規格文件庫（1:1 路徑對照） |
+| [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | **Sensor 模組** | 用於 `UM-GPM7-camera` 的 Sensor（TOF 測距與感測器模組） |
+| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | ⚠️ **已廢棄（Deprecated）** | 早期 GPA7 / Wi-Fi / P2P 原型專案。因架構重組、功能已解耦拆分並由後續專案（如 `camera` 與獨立 sensor 模組）取代，僅保留歷史參考。 |
 
 ---
 
