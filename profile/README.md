@@ -33,6 +33,7 @@
 | [**ESP32_ApplicationShield**](https://github.com/opo200tw/ESP32_ApplicationShield) | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
 | [**ESP32_ApplicationShield_HTPA**](https://github.com/opo200tw/ESP32_ApplicationShield_HTPA) | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
 | [**MLX90640-With-STM32**](https://github.com/opo200tw/MLX90640-With-STM32) | **MLX90640** | Melexis MLX90640 32×24 像素紅外熱成像陣列感測器驅動（STM32 平台） |
+| [**x-cube-tof1**](https://github.com/opo200tw/x-cube-tof1) | **VL53L4 TOF** | ST VL53L1 / VL53L4 TOF（Time-of-Flight）雷射測距感測器驅動套件 |
 
 ---
 
@@ -63,7 +64,6 @@
 | [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔** | [Deprecated] 原為 UM-GPM7-camera 的 sensor，現已廢棄停用，僅供歷史參考 |
 | [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
 | [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
-| [**x-cube-tof1**](https://github.com/opo200tw/x-cube-tof1) | 📦 **已歸檔** | [Deprecated] 原為 UM-GPM7-camera 的 TOF 測距感測器驅動包，驅動已整合至主專案，本庫已歸檔封存 |
 
 ---
 
