@@ -81,7 +81,7 @@ def main():
 
         # 5. 相機與影像系統主專案
         if "camera" in name.lower() or "gpm7" in name.lower() or "thermal" in name.lower():
-            item["role"] = "技術手冊" if "docs" in name.lower() else "主要專案"
+            item["role"] = "技術手冊" if "docs" in name.lower() else ("平台 SDK 對照庫" if "sdk" in name.lower() else "主要專案")
             camera_active_repos.append(item)
             continue
 
