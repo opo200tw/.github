@@ -11,7 +11,11 @@ def main():
     with open(json_path, "r", encoding="utf-8") as f:
         repos = json.load(f)
 
-    # 分類容器
+    # 安全防呆：如果抓取的 repo 數量過少（例如沒有權限只抓到公開 repo），中斷執行避免覆蓋
+    if len(repos) < 10:
+        print(f"Error: Only {len(repos)} repositories fetched. Missing private repo permissions? Aborting to prevent overwriting profile.")
+        sys.exit(1)
+
     animal_speaker_repos = []
     camera_active_repos = []
     camera_archived_repos = []
