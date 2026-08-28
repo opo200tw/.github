@@ -22,6 +22,7 @@
 
 | 專案 / 儲存庫 | 狀態 / 角色 | 說明 |
 | :--- | :--- | :--- |
+| [**UM-GPM7**](https://github.com/opo200tw/UM-GPM7) | **主要專案** | GeneralPlus GPA7XXXA 原廠 SDK 多版本（v1.2, v1.3.1）鏡像與 camera 產品 code subtree 對照庫 |
 | [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
 | [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
 | [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
@@ -45,6 +46,7 @@
 | :--- | :--- |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
+| [**odi-neurotek-ble-system-fw**](https://github.com/opo200tw/odi-neurotek-ble-system-fw) | Neurotek BLE Therapy Device System Firmware (nRF52840 / Zephyr) |
 
 ---
 
