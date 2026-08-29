@@ -22,7 +22,8 @@
 
 | 專案 / 儲存庫 | 狀態 / 角色 | 說明 |
 | :--- | :--- | :--- |
-| [**UM-GPM7**](https://github.com/opo200tw/UM-GPM7) | **主要專案** | GeneralPlus GPA7XXXA 原廠 SDK 多版本（v1.2, v1.3.1）鏡像與 camera 產品 code subtree 對照庫 |
+| [**UM-GPM7**](https://github.com/opo200tw/UM-GPM7) | **主要專案** | GeneralPlus GPA7XXXA 原廠 SDK camera 產品 code subtree 鏡像 + umbrella 治理（SDK baseline 改由 UM-GPM7-SDK-v1.2 / v1.3.1 以 git worktree 掛載） |
+| [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | **平台 SDK 對照庫** | GeneralPlus GPA7XXXA SDK v1.2 原廠 vendor baseline（UM-GPM7 worktree 掛載來源；與已封存的 UM-GPM7-SDK-v1.2 無共同歷史） |
 | [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
 | [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
 | [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
@@ -68,7 +69,6 @@
 | [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔** | [Deprecated] 早期熱成像原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/HTPA，Target: HTPA) |
 | [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔** | [Deprecated] 早期 TOF 測距原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/TOF，Target: TOF) |
 | [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
-| [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | 📦 **已歸檔** | [Deprecated] 早期 GeneralPlus GPM7 / GPA7 原廠 SDK V1.2 歷史版本，已由 UM-GPM7-SDK-v1.3.1 取代封存 |
 | [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
 | [**electron-vue3-serial**](https://github.com/opo200tw/electron-vue3-serial) | 📦 **已歸檔** | [Deprecated] 早期基於 Electron + Vue 3 開發之跨平台序列埠除錯終端，已封存 |
 | [**electron-vue3-serial-**](https://github.com/opo200tw/electron-vue3-serial-) | 📦 **已歸檔** | [Deprecated] 早期 Electron + Vue 3 序列埠通訊專案分支，已封存 |
