@@ -4,7 +4,7 @@
 
 ---
 
-## 🦌 Animal Speaker（雙機式動物呼叫器）
+## 🦌 Animal Speaker（雙機式動物呼叫器 / GPM4 系列）
 
 > **雙機式動物叫聲遊戲呼叫器（Game-Call Device）韌體與平台架構**
 
@@ -13,21 +13,24 @@
 | [**GPM4_Platform_Code_V1.0.3_Release2**](https://github.com/opo200tw/GPM4_Platform_Code_V1.0.3_Release2) | **SDK 歷史快照** | GeneralPlus GPM4 晶片平台 SDK 歷史版本快照（V1.0.3 Release 2） |
 | [**UM-GPM4**](https://github.com/opo200tw/UM-GPM4) | **平台對照庫（Platform Umbrella）** | GeneralPlus GPM47XXA 原廠 SDK 多版本（v1.0.3, v1.0.4-release）鏡像與 Meson 工具鏈對照庫 |
 | [**UM-GPM4-AnimalSpeaker**](https://github.com/opo200tw/UM-GPM4-AnimalSpeaker) | **產品韌體正本（Canonical）** | 雙機式動物呼叫器產品韌體正本（HandUnit + Speaker + Bootloader + BLE 通訊協定） |
+| [**UM-GPM4-doc**](https://github.com/opo200tw/UM-GPM4-doc) | **原廠規格與手冊庫** | Generalplus GPM4 系列原廠規格書 (Datasheets)、手冊 (Guides)、平台原始碼 (PlatformCode) 與 Code Packer 工具包 |
+| [**UM-GPM4-image-tool**](https://github.com/opo200tw/UM-GPM4-image-tool) | **UI 圖像轉換工具** | GeneralPlus GPM4 晶片 TFT-LCD 螢幕 UI 影像轉換工具：將 PNG/JPG 圖標轉換為 RGBA/ARGB C Header 點陣陣列（用於 HandUnit 遙控器選單與 UI 資源） |
 
 ---
 
-## 📷 影像、相機與感測系統（Vision, Camera & Sensing）
+## 📷 影像、相機與感測系統（Vision, Camera & Sensing / GPM7 系列）
 
 ### 核心專案與文件
 
 | 專案 / 儲存庫 | 狀態 / 角色 | 說明 |
 | :--- | :--- | :--- |
-| [**UM-GPM7**](https://github.com/opo200tw/UM-GPM7) | **主要專案** | GeneralPlus GPA7XXXA 原廠 SDK camera 產品 code subtree 鏡像 + umbrella 治理（SDK baseline 改由 UM-GPM7-SDK-v1.2 / v1.3.1 以 git worktree 掛載） |
+| [**UM-GPM7**](https://github.com/opo200tw/UM-GPM7) | **平台治理庫（Platform Umbrella）** | GeneralPlus GPA7XXXA 原廠 SDK camera 產品 code subtree 鏡像 + umbrella 治理（SDK baseline 改由 UM-GPM7-SDK-v1.2 / v1.3.1 以 git worktree 掛載） |
 | [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | **平台 SDK 對照庫** | GeneralPlus GPA7XXXA SDK v1.2 原廠 vendor baseline（UM-GPM7 worktree 掛載來源；與已封存的 UM-GPM7-SDK-v1.2 無共同歷史） |
 | [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
-| [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要專案** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
-| [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **技術手冊** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
-| [**UM-GPM7-camera-undistort**](https://github.com/opo200tw/UM-GPM7-camera-undistort) | **校準工具** | GPM7 相機鏡頭畸變校正表生成與雙光單應性對齊工具（OpenCV） |
+| [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要產品正本（Canonical）** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
+| [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **原廠規格與硬體設計庫** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
+| [**UM-GPM7-camera-undistort**](https://github.com/opo200tw/UM-GPM7-camera-undistort) | **鏡頭校準工具** | GPM7 相機鏡頭畸變校正表生成與雙光單應性對齊工具（OpenCV） |
+| [**UM-GPM7-doc**](https://github.com/opo200tw/UM-GPM7-doc) | **原廠規格與硬體設計庫** | Generalplus GPA7XXXA / GPY 系列原廠規格書、使用者手冊與海德威硬體參考設計庫 |
 
 ### 🔬 感測器驅動與核心模組（Sensors & Core Modules）
 
@@ -41,7 +44,7 @@
 
 ---
 
-## 🔬 其他嵌入式與硬體專案（Other Embedded Projects）
+## 🧬 醫療與物聯網韌體（Medical & IoT Systems）
 
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
@@ -51,11 +54,10 @@
 
 ---
 
-## 🛠️ 開發工具與周邊（Tools & Utilities）
+## 🛠️ 開發與量產除錯工具（Tools & Utilities）
 
 | 專案 / 儲存庫 | 說明 |
 | :--- | :--- |
-| [**UM-GPM4-image-tool**](https://github.com/opo200tw/UM-GPM4-image-tool) | GeneralPlus GPM4 晶片 TFT-LCD 螢幕 UI 影像轉換工具：將 PNG/JPG 圖標轉換為 RGBA/ARGB C Header 點陣陣列（用於 HandUnit 遙控器選單與 UI 資源） |
 | [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | Cross-platform serial debug terminal (TUI + headless) for FTDI/CDC devices |
 | [**nrf-command-line-factory**](https://github.com/opo200tw/nrf-command-line-factory) | Nordic nRF52 晶片工廠端量產自動化燒錄與測試桌面工具（J-Link / nrfutil GUI/CLI） |
 

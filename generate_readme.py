@@ -108,11 +108,15 @@ def main():
             continue
 
         # 4. Animal Speaker / GPM4 系列
-        if "animalspeaker" in name.lower() or name == "UM-GPM4" or "gpm4_platform" in name.lower():
+        if "animalspeaker" in name.lower() or "gpm4" in name.lower():
             if "animalspeaker" in name.lower():
                 item["role"] = "產品韌體正本（Canonical）"
+            elif "doc" in name.lower():
+                item["role"] = "原廠規格與手冊庫"
             elif name == "UM-GPM4":
                 item["role"] = "平台對照庫（Platform Umbrella）"
+            elif "image-tool" in name.lower():
+                item["role"] = "UI 圖像轉換工具"
             else:
                 item["role"] = "SDK 歷史快照"
             animal_speaker_repos.append(item)
@@ -120,7 +124,18 @@ def main():
 
         # 5. 相機與影像系統主專案
         if "camera" in name.lower() or "gpm7" in name.lower() or "thermal" in name.lower():
-            item["role"] = "技術手冊" if "docs" in name.lower() else ("平台 SDK 對照庫" if "sdk" in name.lower() else ("校準工具" if "undistort" in name.lower() else "主要專案"))
+            if name == "UM-GPM7-camera":
+                item["role"] = "主要產品正本（Canonical）"
+            elif name == "UM-GPM7":
+                item["role"] = "平台治理庫（Platform Umbrella）"
+            elif "sdk" in name.lower():
+                item["role"] = "平台 SDK 對照庫"
+            elif "doc" in name.lower():
+                item["role"] = "原廠規格與硬體設計庫"
+            elif "undistort" in name.lower():
+                item["role"] = "鏡頭校準工具"
+            else:
+                item["role"] = "主要專案"
             camera_active_repos.append(item)
             continue
 
@@ -149,7 +164,7 @@ def main():
         "",
         "---",
         "",
-        "## 🦌 Animal Speaker（雙機式動物呼叫器）",
+        "## 🦌 Animal Speaker（雙機式動物呼叫器 / GPM4 系列）",
         "",
         "> **雙機式動物叫聲遊戲呼叫器（Game-Call Device）韌體與平台架構**",
         "",
@@ -164,7 +179,7 @@ def main():
         "",
         "---",
         "",
-        "## 📷 影像、相機與感測系統（Vision, Camera & Sensing）",
+        "## 📷 影像、相機與感測系統（Vision, Camera & Sensing / GPM7 系列）",
         "",
         "### 核心專案與文件",
         "",
@@ -191,7 +206,7 @@ def main():
             "",
             "---",
             "",
-            "## 🔬 其他嵌入式與硬體專案（Other Embedded Projects）",
+            "## 🧬 醫療與物聯網韌體（Medical & IoT Systems）",
             "",
             "| 專案 / 儲存庫 | 說明 |",
             "| :--- | :--- |"
@@ -204,7 +219,7 @@ def main():
             "",
             "---",
             "",
-            "## 🛠️ 開發工具與周邊（Tools & Utilities）",
+            "## 🛠️ 開發與量產除錯工具（Tools & Utilities）",
             "",
             "| 專案 / 儲存庫 | 說明 |",
             "| :--- | :--- |"
