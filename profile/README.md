@@ -50,7 +50,9 @@
 | :--- | :--- |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF52832（ND52L15）晶片之 HeartMath 專案韌體 |
+| [**UM-odi-neurotek-ble-system**](https://github.com/opo200tw/UM-odi-neurotek-ble-system) | 嵌入式韌體專案 |
 | [**odi-neurotek-ble-system-fw**](https://github.com/opo200tw/odi-neurotek-ble-system-fw) | Neurotek BLE Therapy Device System Firmware (nRF52840 / Zephyr) |
+| [**odi-neurotek-ble-system-sw**](https://github.com/opo200tw/odi-neurotek-ble-system-sw) | 嵌入式韌體專案 |
 
 ---
 
