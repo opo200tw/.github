@@ -53,6 +53,7 @@
 | [**UM-odi-neurotek-ble-system**](https://github.com/opo200tw/UM-odi-neurotek-ble-system) | 嵌入式韌體專案 |
 | [**odi-neurotek-ble-system-fw**](https://github.com/opo200tw/odi-neurotek-ble-system-fw) | Neurotek BLE Therapy Device System Firmware (nRF52840 / Zephyr) |
 | [**odi-neurotek-ble-system-sw**](https://github.com/opo200tw/odi-neurotek-ble-system-sw) | 嵌入式韌體專案 |
+| [**tutk_macos_version**](https://github.com/opo200tw/tutk_macos_version) | TUTK Kalay SDK 4.3.6.2 (general linux, openssl 3.1.4 static) macOS port, samples and the tutk3rd camera CLI |
 
 ---
 
