@@ -1,112 +1,142 @@
-# opo200tw
+# opo200tw ⚡
 
-歡迎來到 **opo200tw** 組織專案總覽。本組織主要維護嵌入式韌體、晶片平台 SDK 鏡像、影像與熱成像系統及相關周邊開發工具。
+> **專注於嵌入式系統（Embedded Systems）、晶片平台 SDK 治理、雙光熱成像與智慧相機（Thermal & Vision AI）、BLE 醫療物聯網（Medical IoT）及量產除錯工具開發。**
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Status-Active%20Engineering-blue?style=flat-square" alt="Status" />
+  <img src="https://img.shields.io/badge/Language-C%20%7C%20C%2B%2B%20%7C%20Go%20%7C%20Python%20%7C%20Dart-green?style=flat-square" alt="Languages" />
+  <img src="https://img.shields.io/badge/RTOS-Zephyr%20%7C%20FreeRTOS-purple?style=flat-square" alt="RTOS" />
+  <img src="https://img.shields.io/badge/Silicon-Nordic%20nRF%20%7C%20GeneralPlus%20GPM-orange?style=flat-square" alt="Silicon" />
+</p>
+
+---
+
+### 🧭 專案領域快速導覽
+- 🦌 [**Animal Speaker 系列（GPM4 雙機遊戲呼叫器）**](#-animal-speaker雙機式動物呼叫器--gpm4-系列)
+- 📷 [**智慧相機與感測系統（GPM7 雙光熱成像 / TOF）**](#-影像相機與感測系統vision-camera--sensing--gpm7-系列)
+- 🧬 [**醫療照護與 BLE 物聯網韌體（Neurotek EMDR / HeartMath）**](#-醫療照護與-ble-物聯網韌體medical--iot-systems)
+- 🛠️ [**自研開發與量產除錯工具（Serial Term / nRF Factory / TUTK）**](#-自研開發與量產除錯工具in-house-tools--utilities)
+- 📚 [**開源技術與協定參考鏡像（串流 / 播放器 / 演算法 / 工具鏈）**](#-開源技術與協定參考鏡像third-party-mirrors--reference-libraries)
+- 📦 [**歷史歸檔專案（已封存原型與分支）**](#-已歸檔專案archived-projects)
 
 ---
 
 ## 🦌 Animal Speaker（雙機式動物呼叫器 / GPM4 系列）
 
-> **雙機式動物叫聲遊戲呼叫器（Game-Call Device）韌體與平台架構**
+> **雙機式動物叫聲遊戲呼叫器（Game-Call Device）韌體與晶片平台架構**
 
-| 專案 / 儲存庫 | 角色與定位 | 說明 |
-| :--- | :--- | :--- |
-| [**GPM4_Platform_Code_V1.0.3_Release2**](https://github.com/opo200tw/GPM4_Platform_Code_V1.0.3_Release2) | **SDK 歷史快照** | GeneralPlus GPM4 晶片平台 SDK 歷史版本快照（V1.0.3 Release 2） |
-| [**UM-GPM4**](https://github.com/opo200tw/UM-GPM4) | **平台對照庫（Platform Umbrella）** | GeneralPlus GPM47XXA 原廠 SDK 多版本（v1.0.3, v1.0.4-release）鏡像與 Meson 工具鏈對照庫 |
-| [**UM-GPM4-AnimalSpeaker**](https://github.com/opo200tw/UM-GPM4-AnimalSpeaker) | **產品韌體正本（Canonical）** | 雙機式動物呼叫器產品韌體正本（HandUnit + Speaker + Bootloader + BLE 通訊協定） |
-| [**UM-GPM4-doc**](https://github.com/opo200tw/UM-GPM4-doc) | **原廠規格與手冊庫** | Generalplus GPM4 系列原廠規格書 (Datasheets)、手冊 (Guides)、平台原始碼 (PlatformCode) 與 Code Packer 工具包 |
-| [**UM-GPM4-image-tool**](https://github.com/opo200tw/UM-GPM4-image-tool) | **UI 圖像轉換工具** | GeneralPlus GPM4 晶片 TFT-LCD 螢幕 UI 影像轉換工具：將 PNG/JPG 圖標轉換為 RGBA/ARGB C Header 點陣陣列（用於 HandUnit 遙控器選單與 UI 資源） |
+| 專案 / 儲存庫 | 權限 | 角色與定位 | 說明 |
+| :--- | :---: | :--- | :--- |
+| [**GPM4_Platform_Code_V1.0.3_Release2**](https://github.com/opo200tw/GPM4_Platform_Code_V1.0.3_Release2) | 🔒 私有 | **SDK 歷史快照** | GeneralPlus GPM4 晶片平台 SDK 歷史版本快照（V1.0.3 Release 2） |
+| [**UM-GPM4**](https://github.com/opo200tw/UM-GPM4) | 🔒 私有 | **平台對照庫（Platform Umbrella）** | GeneralPlus GPM47XXA 原廠 SDK 多版本（v1.0.3, v1.0.4-release）鏡像與 Meson 工具鏈對照庫 |
+| [**UM-GPM4-AnimalSpeaker**](https://github.com/opo200tw/UM-GPM4-AnimalSpeaker) | 🔒 私有 | **產品韌體正本（Canonical）** | 雙機式動物呼叫器產品韌體正本（HandUnit + Speaker + Bootloader + BLE 通訊協定） |
+| [**UM-GPM4-doc**](https://github.com/opo200tw/UM-GPM4-doc) | 🔒 私有 | **原廠規格與手冊庫** | Generalplus GPM4 系列原廠規格書 (Datasheets)、手冊 (Guides)、平台原始碼 (PlatformCode) 與 Code Packer 工具包 |
+| [**UM-GPM4-image-tool**](https://github.com/opo200tw/UM-GPM4-image-tool) | 🌐 開源 | **UI 圖像轉換工具** | GeneralPlus GPM4 晶片 TFT-LCD 螢幕 UI 影像轉換工具：將 PNG/JPG 圖標轉換為 RGBA/ARGB C Header 點陣陣列（用於 HandUnit 遙控器選單與 UI 資源） |
 
 ---
 
 ## 📷 影像、相機與感測系統（Vision, Camera & Sensing / GPM7 系列）
 
-### 核心專案與文件
+### 核心專案與平台規格
 
-| 專案 / 儲存庫 | 狀態 / 角色 | 說明 |
-| :--- | :--- | :--- |
-| [**UM-GPM7**](https://github.com/opo200tw/UM-GPM7) | **平台治理庫（Platform Umbrella）** | GeneralPlus GPA7XXXA 原廠 SDK camera 產品 code subtree 鏡像 + umbrella 治理（SDK baseline 改由 UM-GPM7-SDK-v1.2 / v1.3.1 以 git worktree 掛載） |
-| [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | **平台 SDK 對照庫** | GeneralPlus GPA7XXXA SDK v1.2 原廠 vendor baseline（UM-GPM7 worktree 掛載來源；與已封存的 UM-GPM7-SDK-v1.2 無共同歷史） |
-| [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
-| [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | **主要產品正本（Canonical）** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
-| [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | **原廠規格與硬體設計庫** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
-| [**UM-GPM7-camera-undistort**](https://github.com/opo200tw/UM-GPM7-camera-undistort) | **鏡頭校準工具** | GPM7 相機鏡頭畸變校正表生成與雙光單應性對齊工具（OpenCV） |
-| [**UM-GPM7-doc**](https://github.com/opo200tw/UM-GPM7-doc) | **原廠規格與硬體設計庫** | Generalplus GPA7XXXA / GPY 系列原廠規格書、使用者手冊與海德威硬體參考設計庫 |
+| 專案 / 儲存庫 | 權限 | 角色與定位 | 說明 |
+| :--- | :---: | :--- | :--- |
+| [**UM-GPM7**](https://github.com/opo200tw/UM-GPM7) | 🔒 私有 | **平台治理庫（Platform Umbrella）** | GeneralPlus GPA7XXXA 原廠 SDK camera 產品 code subtree 鏡像 + umbrella 治理（SDK baseline 改由 UM-GPM7-SDK-v1.2 / v1.3.1 以 git worktree 掛載） |
+| [**UM-GPM7-SDK-v1.2**](https://github.com/opo200tw/UM-GPM7-SDK-v1.2) | 🔒 私有 | **平台 SDK 對照庫** | GeneralPlus GPA7XXXA SDK v1.2 原廠 vendor baseline（UM-GPM7 worktree 掛載來源；與已封存的 UM-GPM7-SDK-v1.2 無共同歷史） |
+| [**UM-GPM7-SDK-v1.3.1**](https://github.com/opo200tw/UM-GPM7-SDK-v1.3.1) | 🔒 私有 | **平台 SDK 對照庫** | GeneralPlus GPM7 / GPA7XXXA 原廠 SDK v1.3.1 平台對照庫 |
+| [**UM-GPM7-camera**](https://github.com/opo200tw/UM-GPM7-camera) | 🔒 私有 | **主要產品正本（Canonical）** | GeneralPlus GPM7 / GPA7XXXA 智慧相機主程式韌體（熱成像 + TOF + RTSP + TUTK P2P） |
+| [**UM-GPM7-camera-docs**](https://github.com/opo200tw/UM-GPM7-camera-docs) | 🔒 私有 | **原廠規格與硬體設計庫** | GPM7 相機專案 1:1 PDF 原廠手冊、晶片暫存器與感測器規格書封存庫 |
+| [**UM-GPM7-camera-undistort**](https://github.com/opo200tw/UM-GPM7-camera-undistort) | 🌐 開源 | **鏡頭校準與雙光對齊** | GPM7 相機鏡頭畸變校正表生成與雙光單應性對齊工具（OpenCV） |
+| [**UM-GPM7-doc**](https://github.com/opo200tw/UM-GPM7-doc) | 🔒 私有 | **原廠規格與硬體設計庫** | Generalplus GPA7XXXA / GPY 系列原廠規格書、使用者手冊與海德威硬體參考設計庫 |
 
 ### 🔬 感測器驅動與核心模組（Sensors & Core Modules）
 
-| 模組 / 儲存庫 | 適用硬體 / 類型 | 說明 |
+| 模組 / 儲存庫 | 權限 | 適用硬體 / 類型 | 說明 |
+| :--- | :---: | :--- | :--- |
+| [**ESP32_ApplicationShield**](https://github.com/opo200tw/ESP32_ApplicationShield) | 🌐 參考 | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
+| [**MLX90640-With-STM32**](https://github.com/opo200tw/MLX90640-With-STM32) | 🌐 參考 | **MLX90640** | Melexis MLX90640 32×24 像素紅外熱成像陣列感測器驅動（STM32 平台） |
+| [**mbedtls**](https://github.com/opo200tw/mbedtls) | 🌐 參考 | **SSL/TLS 加密** | 輕量級嵌入式 SSL/TLS 加密庫（作為 UM-GPM7-camera 內部 lib/mbedtls 與 lwIP 網路安全連線之核心基礎） |
+| [**ringbuff**](https://github.com/opo200tw/ringbuff) | 🌐 參考 | **Lock-Free Buffer** | 高效無鎖環形緩衝區（作為 UM-GPM7-camera 內部 lib/RingBuffer Lock-Free SPSC 音視訊緩衝之核心基礎） |
+| [**x-cube-tof1**](https://github.com/opo200tw/x-cube-tof1) | 🌐 參考 | **VL53L4 TOF** | ST VL53L1 / VL53L4 TOF（Time-of-Flight）雷射測距感測器驅動套件 |
+
+---
+
+## 🧬 醫療照護與 BLE 物聯網韌體（Medical & IoT Systems）
+
+| 專案 / 儲存庫 | 權限 | 角色與定位 | 說明 |
+| :--- | :---: | :--- | :--- |
+| [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | 🔒 私有 | **EMDR 產品韌體正本** | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
+| [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | 🔒 私有 | **HeartMath 產品韌體正本** | Nordic nRF54L15 之 HeartMath 專案韌體（在新平台重現舊產品 BLE 行為） |
+| [**UM-odi-neurotek-ble-system**](https://github.com/opo200tw/UM-odi-neurotek-ble-system) | 🔒 私有 | **系統整合工作區（Umbrella Workspace）** | ODI Neurotek BLE 心理治療系統 Umbrella 工作區（EMDR 治療設備韌體與軟體整合） |
+| [**odi-neurotek-ble-system-fw**](https://github.com/opo200tw/odi-neurotek-ble-system-fw) | 🔒 私有 | **醫療設備系統韌體（Zephyr / NCS）** | Neurotek BLE 心理治療設備系統韌體（nRF52840 / nRF54L15 雙平台，基於 Zephyr / NCS） |
+| [**odi-neurotek-ble-system-sw**](https://github.com/opo200tw/odi-neurotek-ble-system-sw) | 🔒 私有 | **跨平台應用軟體（Flutter App）** | Neurotek BLE 心理治療師與病患應用程式（Flutter 跨平台 App：Therapist / Patient） |
+
+---
+
+## 🛠️ 自研開發與量產除錯工具（In-house Tools & Utilities）
+
+| 專案 / 儲存庫 | 權限 | 角色與定位 | 說明 |
+| :--- | :---: | :--- | :--- |
+| [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | 🌐 開源 | **跨平台序列除錯終端（Go TUI）** | Cross-platform serial debug terminal (TUI + headless) for FTDI/CDC devices |
+| [**nrf-command-line-factory**](https://github.com/opo200tw/nrf-command-line-factory) | 🌐 開源 | **工廠量產自動化燒錄與測試** | Nordic nRF52 晶片工廠端量產自動化燒錄與測試桌面工具（J-Link / nrfutil GUI/CLI） |
+| [**tutk_macos_version**](https://github.com/opo200tw/tutk_macos_version) | 🔒 私有 | **P2P 串流 SDK 移植與除錯 CLI** | TUTK Kalay SDK 4.3.6.2 (general linux, openssl 3.1.4 static) macOS port, samples and the tutk3rd camera CLI |
+
+---
+
+## 📚 開源技術與協定參考鏡像（Third-party Mirrors & Reference Libraries）
+
+### 🎥 音視訊串流與播放測試
+
+| 工具 / 參考鏡像 | 領域 / 分類 | 說明與用途 |
 | :--- | :--- | :--- |
-| [**ESP32_ApplicationShield**](https://github.com/opo200tw/ESP32_ApplicationShield) | **Heimann HTPAd** | Heimann HTPAd 熱電堆陣列熱成像感測器驅動與校準計算（ESP32 平台） |
-| [**MLX90640-With-STM32**](https://github.com/opo200tw/MLX90640-With-STM32) | **MLX90640** | Melexis MLX90640 32×24 像素紅外熱成像陣列感測器驅動（STM32 平台） |
-| [**mbedtls**](https://github.com/opo200tw/mbedtls) | **SSL/TLS 加密** | 輕量級嵌入式 SSL/TLS 加密庫（作為 UM-GPM7-camera 內部 lib/mbedtls 與 lwIP 網路安全連線之核心基礎） |
-| [**ringbuff**](https://github.com/opo200tw/ringbuff) | **Lock-Free Buffer** | 高效無鎖環形緩衝區（作為 UM-GPM7-camera 內部 lib/RingBuffer Lock-Free SPSC 音視訊與通訊緩衝之核心基礎） |
-| [**x-cube-tof1**](https://github.com/opo200tw/x-cube-tof1) | **VL53L4 TOF** | ST VL53L1 / VL53L4 TOF（Time-of-Flight）雷射測距感測器驅動套件 |
+| [**RTSPtoWeb**](https://github.com/opo200tw/RTSPtoWeb) | **🎥 音視訊串流** | RTSP 轉 Web 播放伺服器（支援 WebRTC / MSE / HLS 瀏覽器即時預覽） |
+| [**html5_rtsp_player**](https://github.com/opo200tw/html5_rtsp_player) | **🎥 音視訊串流** | HTML5 RTSP 網頁播放器前端組件（免外掛瀏覽器播放） |
+| [**ipchub**](https://github.com/opo200tw/ipchub) | **🎥 音視訊串流** | 輕量級網路攝影機（IPC）流媒體伺服器與集中管理 |
+| [**jessibuca**](https://github.com/opo200tw/jessibuca) | **🎥 音視訊串流** | 開源純 H5 跨平台低延遲直播流播放器前端組件 |
+| [**lal**](https://github.com/opo200tw/lal) | **🎥 音視訊串流** | 高效能音視訊直播流媒體伺服器（RTMP / RTSP / HLS / HTTP-FLV） |
+| [**naza**](https://github.com/opo200tw/naza) | **🎥 音視訊串流** | Go 語言基礎公用函式庫（lal 串流伺服器依賴） |
 
----
+### 🔊 音訊轉碼與影像處理
 
-## 🧬 醫療與物聯網韌體（Medical & IoT Systems）
+| 工具 / 參考鏡像 | 領域 / 分類 | 說明與用途 |
+| :--- | :--- | :--- |
+| [**colorbar**](https://github.com/opo200tw/colorbar) | **🖼️ 影像測試** | 彩色測試圖條生成器（生成 RGB/YUV 各解析度測試圖，用於相機 ISP 除錯） |
+| [**faac**](https://github.com/opo200tw/faac) | **🔊 音訊轉碼** | AAC 音訊壓縮編碼庫（Freeware Advanced Audio Coder） |
+| [**leptonica**](https://github.com/opo200tw/leptonica) | **🖼️ 影像演算法** | C 語言高效影像分析與幾何轉換演算法庫 |
+| [**libg7112aac**](https://github.com/opo200tw/libg7112aac) | **🔊 音訊轉碼** | 嵌入式音訊轉碼庫（G.711 語音編碼 ➔ AAC 格式轉換） |
+| [**stb**](https://github.com/opo200tw/stb) | **🖼️ 單檔工具庫** | 知名 C/C++ Header-only 單檔工具庫（stb_image, stb_truetype 等） |
 
-| 專案 / 儲存庫 | 說明 |
-| :--- | :--- |
-| [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
-| [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | Nordic nRF54L15 之 HeartMath 專案韌體（在新平台重現舊產品 BLE 行為） |
-| [**UM-odi-neurotek-ble-system**](https://github.com/opo200tw/UM-odi-neurotek-ble-system) | 嵌入式韌體專案 |
-| [**odi-neurotek-ble-system-fw**](https://github.com/opo200tw/odi-neurotek-ble-system-fw) | Neurotek BLE Therapy Device System Firmware (nRF52840 / Zephyr) |
-| [**odi-neurotek-ble-system-sw**](https://github.com/opo200tw/odi-neurotek-ble-system-sw) | 嵌入式韌體專案 |
-| [**tutk_macos_version**](https://github.com/opo200tw/tutk_macos_version) | TUTK Kalay SDK 4.3.6.2 (general linux, openssl 3.1.4 static) macOS port, samples and the tutk3rd camera CLI |
+### ⚙️ 底層演算法、工具鏈與系統輔助
 
----
-
-## 🛠️ 開發與量產除錯工具（Tools & Utilities）
-
-| 專案 / 儲存庫 | 說明 |
-| :--- | :--- |
-| [**agents-serial-term**](https://github.com/opo200tw/agents-serial-term) | Cross-platform serial debug terminal (TUI + headless) for FTDI/CDC devices |
-| [**nrf-command-line-factory**](https://github.com/opo200tw/nrf-command-line-factory) | Nordic nRF52 晶片工廠端量產自動化燒錄與測試桌面工具（J-Link / nrfutil GUI/CLI） |
+| 工具 / 參考鏡像 | 領域 / 分類 | 說明與用途 |
+| :--- | :--- | :--- |
+| [**crc32**](https://github.com/opo200tw/crc32) | **⚙️ 演算法原理** | 高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗） |
+| [**csv_parser**](https://github.com/opo200tw/csv_parser) | **⚙️ 底層參考** | 純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔） |
+| [**doc**](https://github.com/opo200tw/doc) | **🔐 協定規範** | 音視訊 RFC 標準協議規範與測試用音視訊檔案庫 |
+| [**snagboot**](https://github.com/opo200tw/snagboot) | **⚙️ 燒錄復原** | 嵌入式平台通用復原、開機導引與 Flash 燒錄工具 |
+| [**toolchains-builder**](https://github.com/opo200tw/toolchains-builder) | **⚙️ 工具鏈建置** | 嵌入式 GCC 交叉編譯工具鏈建置與自動化腳本 |
 
 ---
 
 ## 📦 已歸檔專案（Archived Projects）
 
-| 專案 / 儲存庫 | 狀態 | 歸檔說明 |
-| :--- | :--- | :--- |
-| [**ESP32_ApplicationShield_HTPA**](https://github.com/opo200tw/ESP32_ApplicationShield_HTPA) | 📦 **已歸檔** | [Deprecated] Heimann HTPAd 熱成像感測器舊版驅動快照，已被 ESP32_ApplicationShield 最新版取代封存 |
-| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 📦 **已歸檔** | [Deprecated] 早期熱成像原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/HTPA，Target: HTPA) |
-| [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 📦 **已歸檔** | [Deprecated] 早期 TOF 測距原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/TOF，Target: TOF) |
-| [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
-| [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
-| [**electron-vue3-serial**](https://github.com/opo200tw/electron-vue3-serial) | 📦 **已歸檔** | [Deprecated] 早期基於 Electron + Vue 3 開發之跨平台序列埠除錯終端，已封存 |
-| [**electron-vue3-serial-**](https://github.com/opo200tw/electron-vue3-serial-) | 📦 **已歸檔** | [Deprecated] 早期 Electron + Vue 3 序列埠通訊專案分支，已封存 |
-| [**inner_tool**](https://github.com/opo200tw/inner_tool) | 📦 **已歸檔** | [Deprecated] 早期內部原始碼格式化與代碼處理工具，已封存 |
-| [**stm32pio-f723**](https://github.com/opo200tw/stm32pio-f723) | 📦 **已歸檔** | [Deprecated] STM32F723 晶片 PlatformIO 韌體專案與驅動架構，已封存 |
-| [**test_tool**](https://github.com/opo200tw/test_tool) | 📦 **已歸檔** | [Deprecated] 早期測試輔助自動化腳本，已封存 |
+| 專案 / 儲存庫 | 權限 | 狀態 | 歸檔說明與重構去向 |
+| :--- | :---: | :---: | :--- |
+| [**ESP32_ApplicationShield_HTPA**](https://github.com/opo200tw/ESP32_ApplicationShield_HTPA) | 🌐 參考 | 📦 **已歸檔** | [Deprecated] Heimann HTPAd 熱成像感測器舊版驅動快照，已被 ESP32_ApplicationShield 最新版取代封存 |
+| [**ThermalCAM**](https://github.com/opo200tw/ThermalCAM) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] 早期熱成像原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/HTPA，Target: HTPA) |
+| [**ThermalCAM-TOF**](https://github.com/opo200tw/ThermalCAM-TOF) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] 早期 TOF 測距原型，已重構為 UM-GPM7-camera 獨立 Demo (sensorProject/TOF，Target: TOF) |
+| [**UM-GPM4-camera**](https://github.com/opo200tw/UM-GPM4-camera) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] 早期 GPM4 相機 RTSP 原型專案，因升級至 GPM7 (UM-GPM7-camera) 已廢棄 |
+| [**caller_and_remote**](https://github.com/opo200tw/caller_and_remote) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] 早期 Bitbucket 託管之動物呼叫器舊版原始碼備份，已被 UM-GPM4-AnimalSpeaker 取代封存 |
+| [**electron-vue3-serial**](https://github.com/opo200tw/electron-vue3-serial) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] 早期基於 Electron + Vue 3 開發之跨平台序列埠除錯終端，已封存 |
+| [**electron-vue3-serial-**](https://github.com/opo200tw/electron-vue3-serial-) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] 早期 Electron + Vue 3 序列埠通訊專案分支，已封存 |
+| [**inner_tool**](https://github.com/opo200tw/inner_tool) | 🌐 開源 | 📦 **已歸檔** | [Deprecated] 早期內部原始碼格式化與代碼處理工具，已封存 |
+| [**stm32pio-f723**](https://github.com/opo200tw/stm32pio-f723) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] STM32F723 晶片 PlatformIO 韌體專案與驅動架構，已封存 |
+| [**test_tool**](https://github.com/opo200tw/test_tool) | 🔒 私有 | 📦 **已歸檔** | [Deprecated] 早期測試輔助自動化腳本，已封存 |
 
 ---
 
-## 🛠️ 開發除錯工具與協定參考鏡像（Tools & Reference Mirrors）
-
-| 工具 / 參考鏡像 | 領域 / 分類 | 說明與用途 |
-| :--- | :--- | :--- |
-| [**csv_parser**](https://github.com/opo200tw/csv_parser) | **⚙️ 嵌入式底層參考** | 純 C 語言 CSV 表格解析器（用於讀取感測器校準表與設定檔） |
-| [**crc32**](https://github.com/opo200tw/crc32) | **⚙️ 演算法原理參考** | 高效 CRC32 校驗演算法庫（用於封包驗證與 OTA 完整性校驗） |
-| [**snagboot**](https://github.com/opo200tw/snagboot) | **⚙️ 燒錄與復原工具** | 嵌入式平台通用復原、開機導引與 Flash 燒錄工具 |
-| [**toolchains-builder**](https://github.com/opo200tw/toolchains-builder) | **⚙️ 編譯工具鏈建置** | 嵌入式 GCC 交叉編譯工具鏈建置與自動化腳本 |
-| [**RTSPtoWeb**](https://github.com/opo200tw/RTSPtoWeb) | **🎥 音視訊串流測試** | RTSP 轉 Web 播放伺服器（支援 WebRTC / MSE / HLS 瀏覽器即時預覽） |
-| [**html5_rtsp_player**](https://github.com/opo200tw/html5_rtsp_player) | **🎥 音視訊串流測試** | HTML5 RTSP 網頁播放器前端組件（免外掛瀏覽器播放） |
-| [**ipchub**](https://github.com/opo200tw/ipchub) | **🎥 音視訊串流測試** | 輕量級網路攝影機（IPC）流媒體伺服器與集中管理 |
-| [**jessibuca**](https://github.com/opo200tw/jessibuca) | **🎥 音視訊串流測試** | 開源純 H5 跨平台低延遲直播流播放器前端組件 |
-| [**lal**](https://github.com/opo200tw/lal) | **🎥 音視訊串流測試** | 高效能音視訊直播流媒體伺服器（RTMP / RTSP / HLS / HTTP-FLV） |
-| [**naza**](https://github.com/opo200tw/naza) | **🎥 音視訊串流測試** | Go 語言基礎公用函式庫（lal 串流伺服器依賴） |
-| [**faac**](https://github.com/opo200tw/faac) | **🔊 音訊轉碼參考** | AAC 音訊壓縮編碼庫（Freeware Advanced Audio Coder） |
-| [**libg7112aac**](https://github.com/opo200tw/libg7112aac) | **🔊 音訊轉碼參考** | 嵌入式音訊轉碼庫（G.711 語音編碼 ➔ AAC 格式轉換） |
-| [**doc**](https://github.com/opo200tw/doc) | **🔐 網路協定文件** | 音視訊 RFC 標準協議規範與測試用音視訊檔案庫 |
-| [**stb**](https://github.com/opo200tw/stb) | **🖼️ 單檔工具庫參考** | 知名 C/C++ Header-only 單檔工具庫（stb_image, stb_truetype 等） |
-| [**colorbar**](https://github.com/opo200tw/colorbar) | **🖼️ 影像測試工具** | 彩色測試圖條生成器（生成 RGB/YUV 各解析度測試圖，用於相機 ISP 除錯） |
-| [**leptonica**](https://github.com/opo200tw/leptonica) | **🖼️ 影像演算法參考** | C 語言高效影像分析與幾何轉換演算法庫 |
-
----
-
-## ⚙️ 組織首頁自動同步機制（GitHub Actions Automation）
+<details>
+<summary><b>⚙️ 組織首頁自動同步機制與維護指引（GitHub Actions Automation）</b></summary>
 
 本首頁目錄由 [**GitHub Actions (`sync-profile.yml`)**](https://github.com/opo200tw/.github/actions/workflows/sync-profile.yml) 搭配 [`generate_readme.py`](https://github.com/opo200tw/.github/blob/main/generate_readme.py) 自動維護與生成：
 
@@ -124,3 +154,5 @@
 - **修改專案說明**：只需直接在各 Repo 的 GitHub 設定頁（About 齒輪）修改 `Description`，Action 就會自動抓取最新說明並填入表格。
 - **專案歸檔**：將 Repo 設為 `Archive` 後，Action 就會自動將該專案移至【📦 已歸檔專案】區塊。
 - **安全防護機制**：腳本內建防呆驗證，若權限異常或抓取數量不足，會自動中止執行，防止覆蓋現有完整目錄。
+
+</details>
