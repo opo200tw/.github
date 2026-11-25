@@ -65,6 +65,7 @@
 
 | 專案 / 儲存庫 | 權限 | 角色與定位 | 說明 |
 | :--- | :---: | :--- | :--- |
+| [**UM-ND52L15-Blackbody**](https://github.com/opo200tw/UM-ND52L15-Blackbody) | 🔒 私有 | **醫療韌體專案** | Blackbody Sub-project for UM-GPM7-camera |
 | [**UM-ND52L15-EMDR**](https://github.com/opo200tw/UM-ND52L15-EMDR) | 🔒 私有 | **EMDR 產品韌體正本** | Nordic nRF52832（ND52L15）晶片之 EMDR 專案韌體 |
 | [**UM-ND52L15-HeartMath**](https://github.com/opo200tw/UM-ND52L15-HeartMath) | 🔒 私有 | **HeartMath 產品韌體正本** | Nordic nRF54L15 之 HeartMath 專案韌體（在新平台重現舊產品 BLE 行為） |
 | [**UM-odi-neurotek-ble-system**](https://github.com/opo200tw/UM-odi-neurotek-ble-system) | 🔒 私有 | **系統整合工作區（Umbrella Workspace）** | ODI Neurotek BLE 心理治療系統 Umbrella 工作區（EMDR 治療設備韌體與軟體整合） |
